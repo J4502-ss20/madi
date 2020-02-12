@@ -1,4 +1,4 @@
 # madi
 Madi Winfield's repository for J4502.
 
-You can find my site here: https://j4502-ss20.github.io/madi
+My most recent assignment can be found here: https://j4502-ss20.github.io/madi/assignment2/assignment2
