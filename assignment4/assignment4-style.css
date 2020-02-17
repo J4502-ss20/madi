@@ -7,17 +7,19 @@ html{
 
 p {
 	color: #666666;
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+		font-family: 'Lato', Helvetica, Arial, sans-serif;
 		font-size: 1rem;
 		line-height: 1.5rem;
 }
 
-.italic {
-	font-style: italic;
+.emphasize {
+	font-weight: 900;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Lato', Helvetica, Arial, sans-serif;
+		font-family: 'Lora', Georgia, 'Times New Roman', serif;
+		font-weight: 700;
+		font-style: italic;
 }
 
 body{
@@ -50,7 +52,7 @@ body{
     text-align:center;
     text-decoration: none;
     padding: 4px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Lato," Helvetica, Arial, sans-serif;
 }
 
 #nav a:hover, a:active {
@@ -59,7 +61,7 @@ body{
 
 .caption {
     color: black;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Lora," Georgia, "Times New Roman", serif;
     font-style: italic;
     font-size: 0.8em;
     margin-top: 0;
@@ -68,7 +70,7 @@ body{
 
 #footer {
     color: black;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Lora," Georgia, "Times New Roman", serif;
     font-size: 0.8em;
     border-top: 1px solid black;
 }
