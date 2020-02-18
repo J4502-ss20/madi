@@ -1,32 +1,89 @@
-/*styles go here*/
-
 html{
 	font-size: 100%;
-	/*font size scales accordingly to user choices (i.e. old people increasing the default size)*/
 }
 
-p {
-	color: #666666;
-		font-family: 'Lato', Helvetica, Arial, sans-serif;
-		font-size: 1rem;
-		line-height: 1.5rem;
+.center {
+	max-width: 80%;
+	margin: auto;
 }
 
-.emphasize {
-	font-weight: 900;
+body {
+	background-color:#D9D5E7;
 }
 
 h1, h2, h3, h4, h5, h6 {
 		font-family: 'Lora', Georgia, 'Times New Roman', serif;
 		font-weight: 700;
 		font-style: italic;
+		color: #645496;
 }
 
-body{
-	background-color:#D9D5E7;
+p {
+	color: #525252;
+		font-family: 'Lato', Helvetica, Arial, sans-serif;
+		font-size: 1rem;
+		line-height: 1.5rem;
 }
 
-#container{
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: #525252;
+	text-align: center;
+}
+
+a img {
+	border: none;
+}
+
+.emphasize {
+	font-weight: 600;
+	font-style: italic;
+}
+
+/*MENU BAR*/
+
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #afa5d1;
+}
+
+ul.topnav li {
+	float: left;
+}
+
+ul.topnav li a {
+	display: block;
+	color: #525252;
+	text-align: center;
+	padding: 5px 20px;
+	text-decoration: none;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-size: 80%;
+}
+
+ul.topnav li a:hover {
+	background-color: #645496;
+	color: #ffffff;
+}
+
+ul.topnav li.right {
+	float: right;
+}
+
+@media screen and (max-width: 1100px) {
+	ul.topnav li.right,
+	ul.topnav li {
+		float: none;
+	}
+}
+
+/*#container{
     width: 95%;
     background-color: #ffffff;
     margin: 0 auto;
@@ -36,7 +93,7 @@ body{
     padding: 0;
 }
 
-#nav li {
+#nav ul {
     list-style-type: none;
     float: left;
     margin: 0;
@@ -44,19 +101,21 @@ body{
     width: 25%;
 }
 
-#nav a:link, a:visited {
-	display:block;
-    color: #ffffff;
-    background-color: #98bf21;
-    font-weight: bold;
-    text-align:center;
-    text-decoration: none;
-    padding: 4px;
-    font-family: "Lato," Helvetica, Arial, sans-serif;
+#nav a:link {
+		link: "red";
+    color: #000000;
+		text-decoration: none;
+		font-family: "Lora," Georgia, "Times New Roman", serif;
+}
+
+#nav a:visited {
+		color: #864da3;
+		text-decoration: none;
 }
 
 #nav a:hover, a:active {
-    background-color: #7a991a;
+		color: #000000;
+		text-decoration: underline;
 }
 
 .caption {
