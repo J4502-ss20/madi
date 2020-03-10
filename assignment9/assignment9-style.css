@@ -26,6 +26,9 @@ p {
 }
 
 #footer {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	position: fixed;
 	left: 0;
 	bottom: 0;
