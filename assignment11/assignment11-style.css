@@ -100,6 +100,7 @@ a img {
 	color: #ffffff;
 }
 
+/*END OF FLEBOX STYLES*/
 /*CARDS*/
 
 .cards {
@@ -138,4 +139,66 @@ a img {
 .sidebar {
 	color: #787878;
 	list-style: none;
+}
+
+/*END OF CARDS*/
+/*HEADER (JQUERY)*/
+
+/*header org, style, order*/
+
+header {
+	display: flex;
+	flex-flow: row;
+	background-color: #645496;
+	margin: 0;
+	padding: 0 10px;
+}
+
+header h1 {
+	order: 2;
+	color: #FFFFFF;
+}
+
+.menu-trigger {
+	order: 1;
+	font-size: 2em;
+	width: 2em;
+}
+
+/*nav org, style*/
+
+nav ul li {
+	display: block;
+	border-top: 1px #79896D solid;
+}
+
+nav a {
+	color: #D9D5E7;
+	display: block;
+	text-decoration: none;
+	padding: 20px 30px;
+}
+
+nav ul {
+	display: none;
+}
+
+/*full-width instructions*/
+
+@media screen and (min-width: 825px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		border-top: none;
+	}
+	.menu-trigger {
+		display: none;
+	}
+	nav {
+		order: 2;
+	}
+	header h1 {
+		order: 1;
+	}
 }
