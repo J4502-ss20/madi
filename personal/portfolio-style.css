@@ -152,6 +152,19 @@ header h1 {
 	width: 2em;
 }
 
+p.menutext {
+	color: #FFFFFF;
+	text-align: center;
+}
+
+img.desktoplogo {
+	display: none;
+}
+
+h1.titletext {
+	padding-top: 12px;
+}
+
 /*nav org, style*/
 
 nav ul li {
@@ -191,6 +204,11 @@ nav ul {
 	}
 	header h1 {
 		order: 1;
+	}
+	img.desktoplogo {
+		display: inline;
+		padding-top: 10px;
+		padding-right: 10px;
 	}
 }
 
