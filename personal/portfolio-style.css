@@ -5,7 +5,7 @@ html{
 }
 
 .center {
-	max-width: 90%;
+	max-width: 70%;
 	margin: auto;
 }
 
@@ -27,7 +27,6 @@ p {
   font-weight: 400;
 	font-size: 1rem;
 	line-height: 1.5rem;
-	max-width: 900px;
 }
 
 #footer {
@@ -52,42 +51,81 @@ a img {
 /*END OF GENERAL STYLES*/
 /*CARDS*/
 
-.cards {
+.aboutgrid {
 	margin: 0 -10px;
 	padding: 0;
 	list-style: none;
 	display: grid;
-	grid-template: 1fr 1fr/repeat(auto-fill, minmax(100px,1fr));
+/*	grid-template: 1fr 1fr/repeat(auto-fill, minmax(100px,1fr));*/
+	grid-template: repeat(5, 1fr);
 	gap: 10px;
 }
 
-.cards li {
+.aboutgrid li {
 /*	background-color: #fef65b;
 	border: 1px solid #cccccc;
 	border-radius: 5px;*/
-	padding: 10px;
+	padding-left: 20px;
 }
 
-/*card layout*/
-
-.cardabout {
-	grid-row: 1/3;
-	grid-column: 1/span 7;
+.aboutheadline {
+	grid-row: 1 / span 1;
+	grid-column: 1 / span 4;
+	text-align: right;
 }
 
-.cardside {
-	grid-column: span 3;
+.aboutbio {
+	grid-row: 2 / span 3;
+	grid-column: 1 / span 4;
+	text-align: right;
 }
 
-.cardside2 {
-	grid-column: span 3;
+.aboutheadshot {
+	grid-row: 1 / span 2;
+	grid-column: 5 / span 1;
+	text-align: center;
+	margin-top: 20px;
 }
 
-/*sub-card design*/
+.aboutlove {
+	grid-row: 3 / span 1;
+	grid-column: 5 / span 1;
+}
 
-.sidebar {
-	color: #787878;
-	list-style: none;
+@when {
+
+}
+
+@media screen and (max-width: 825px) {
+
+	.center {
+		max-width: 90%;
+	}
+
+	.aboutheadline {
+		grid-row: 1 / span 1;
+		grid-column: 1 / span 1;
+		text-align: center;
+	}
+
+	.aboutbio {
+		grid-row: 3 / span 1;
+		grid-column: 1 / span 1;
+		text-align: left;
+		margin-right: 20px;
+	}
+
+	.aboutheadshot {
+		grid-row: 2 / span 1;
+		grid-column: 1 / span 1;
+		margin-top: 0px;
+	}
+
+	.aboutlove {
+		grid-row: 4 / span 1;
+		grid-column: 1 / span 1;
+	}
+
 }
 
 /*END OF CARDS*/
@@ -118,7 +156,11 @@ header h1 {
 
 nav ul li {
 	display: block;
-	border-top: 1px #79896D solid;
+	border-top: 1px #888888 solid;
+}
+
+.last {
+	padding-bottom: 40px;
 }
 
 nav a {
