@@ -1,4 +1,6 @@
-/*GENERAL STYLES*/
+/*------------------------------------------------------------
+GENERAL STYLES
+------------------------------------------------------------*/
 
 html{
 	font-size: 100%;
@@ -6,6 +8,11 @@ html{
 
 .center {
 	max-width: 70%;
+	margin: auto;
+}
+
+.widecenter {
+	max-width: 95%;
 	margin: auto;
 }
 
@@ -48,8 +55,10 @@ a img {
 	font-style: italic;
 }
 
-/*END OF GENERAL STYLES*/
-/*CARDS*/
+/*------------------------------------------------------------
+END OF GENERAL STYLES*/
+/*CARDS
+------------------------------------------------------------*/
 
 .aboutgrid {
 	margin: 0 -10px;
@@ -92,8 +101,32 @@ a img {
 	grid-column: 5 / span 1;
 }
 
-@when {
+.storygrid1 {
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	grid-template-rows: minmax(10px, .25fr) minmax(10px, 1fr);
+	gap: 20px;
+}
 
+.storyleadimage {
+	grid-row: 1 / span 2;
+	grid-column: 1 / span 1;
+}
+
+.storyleadimage img {
+	width: 1000px; max-width: 100%;
+}
+
+.storyheadline {
+	grid-row: 1 / span 1;
+	grid-column: 2 / span 1;
+}
+
+.storytext {
+	grid-row: 2 / span 1;
+	grid-column: 2 / span 1;
 }
 
 @media screen and (max-width: 825px) {
@@ -128,8 +161,39 @@ a img {
 
 }
 
-/*END OF CARDS*/
-/*HEADER (JQUERY)*/
+@media screen and (max-width: 900px) {
+
+	.storygrid1 {
+		grid-template-columns: 1fr;
+		grid-template-rows: minmax(10px, .25fr) minmax(10px, 1fr) minmax(10px, 1fr);
+		gap: 20px;
+	}
+
+	.storyheadline {
+		grid-row: 1 / span 1;
+		grid-column: 1 / span 1;
+	}
+
+	.storyleadimage {
+		grid-row: 2 / span 1;
+		grid-column: 1 / span 1;
+	}
+
+	.storytext {
+		grid-row: 3 / span 1;
+		grid-column: 1 / span 1;
+	}
+
+	.storytext h1 {
+		text-align: center;
+	}
+
+}
+
+/*------------------------------------------------------------
+END OF CARDS*/
+/*HEADER (JQUERY)
+------------------------------------------------------------*/
 
 /*header org, style, order*/
 
@@ -212,10 +276,12 @@ nav ul {
 	}
 }
 
-/*END OF HEADER (JQUERY)*/
-/*SLIDESHOW*/
+/*------------------------------------------------------------
+END OF HEADER (JQUERY)*/
+/*SLIDESHOW
+------------------------------------------------------------*/
 
-.slideshow-container {
+/*.slideshow-container {
 	max-width: 1000px;
 	position: relative;
 	margin: auto;
@@ -313,3 +379,289 @@ nav ul {
 	from {opacity: .4}
 	to {opacity: 1}
 }
+*/
+
+/*------------------------------------------------------------
+END OF SLIDESHOW*/
+/*HOVER
+------------------------------------------------------------*/
+
+/*.hovercontainer {
+	position: relative;
+	width: 50%;
+}
+
+.hoverimage {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.hovermiddle {
+	transition: .5s ease;
+	opacity: 0;
+	position: relative;
+	bottom: 0%;
+	right: 0%;
+	transform: translate(-0%, -100%);
+	-ms-transform: translate(-0%, -100%);
+	text-align: center;
+}
+
+.hovercontainer:hover .hoverimage {
+	opacity: 0.9;
+}
+
+.hovercontainer:hover .hovermiddle {
+	opacity: 1;
+}
+
+.hovertext {
+	background-color: black;
+	opacity: 0.6;
+	color: white;
+	font-size: 20px;
+	padding: 10px 10px;
+}*/
+
+/*------------------------------------------------------------
+END OF HOVER*/
+/*LIGHTBOX TRIAL
+------------------------------------------------------------*/
+
+/*.row > .column {
+	padding: 0 8px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column {
+	float: left;
+	width: 25%;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: black;
+}
+
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	width: 90%;
+	max-width: 1200px;
+}
+
+.close {
+	color: white;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #999999;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.mySlides {
+	display: none;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.next {
+	right: 0;
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+img {
+	margin-bottom: -4px;
+}
+
+.caption-container {
+	text-align: center;
+	background-color: black;
+	padding: 2px 16px;
+	color: white;
+}
+
+.demo {
+	opacity: 0.6;
+}
+
+.active, .demo:hover {
+	opacity: 1;
+}
+
+img.hover-shadow {
+	transition: 0.3s;
+}
+
+.hover-shadow:hover {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}*/
+
+/*------------------------------------------------------------
+END OF LIGHTBOX TRIAL*/
+/*GRID GALLERY TRIAL
+------------------------------------------------------------*/
+
+/*.gg-box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+	grid-auto-rows: 200px;
+	grid-gap: 8px;
+}
+
+.gg-element img {
+	object-fit: cover;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.02);
+}
+
+.gg-element img:hover {
+	opacity: 0.98;
+}
+
+#gg-screen {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	display: none;
+	background: rgba(255,255,255,0.85);
+	z-index: 9999;
+	text-align: center;
+}
+
+#gg-screen .gg-image {
+	height: 100%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#gg-screen .gg-image img {
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+}
+
+.gg-bt {
+	width: 38px;
+	height: 38px;
+	background: rgba(255,255,255,0.6);
+	color: #222222;
+	text-align: center;
+	line-height: 32px;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+	transition: all .4s ease;
+	font-size: 25px;
+	border: 1px solid rgba(0,0,0,0.05);
+	box-sizing: border-box;
+	padding-left: 2px;
+}
+
+.gg-bt:hover {
+	background: rgba(255,255,255,0.8);
+	border: 1px solid rgba(0,0,0,0.5);
+}
+
+.gg-close {
+	position: fixed;
+	top: 0.5em;
+}
+
+.gg-close, .gg-nxt {
+	right: 0.5em;
+}
+
+.gg-prev {
+	left: 0.5em;
+}
+
+.gg-prev, .gg-nxt {
+	position: fixed;
+	bottom: 50%;
+}
+
+@media(min-width:478px) {
+	.gg-element:nth-child(3n+0) {
+		grid-row-end: span 2;
+	}
+}
+
+@media(max-width:768px) {
+	.gg-box {
+		grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+		grid-auto-rows: 150px;
+		grid-gap: 6px;
+	}
+}
+
+@media(max-width: 450px) {
+	.gg-box {
+		grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+		grid-auto-rows: 100px;
+		grid-gap: 4px;
+	}
+}
+*/
